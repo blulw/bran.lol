@@ -121,17 +121,17 @@
     color:white;
 }
 .b1:hover {
-    background-color: rgb(50, 50, 228);
+    background-color: rgba(50, 50, 228, 0.733);
     font-weight: bold;
 }
 
 .b2:hover {
-    background-color: rgba(99, 99, 99, 0.267);
+    background-color: rgba(99, 99, 99, 0.733);
     color: black;
     font-weight:bold;
 }
 
 .b3:hover {
-    background-color: rgb(243, 174, 226);
+    background-color: rgba(243, 174, 226, 0.733);
     font-weight: bold;
 }
