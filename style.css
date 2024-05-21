@@ -121,8 +121,9 @@
     color:white;
 }
 .b1:hover {
-    background-color: rgb(50, 50, 228);
+    background-color: rgba(99,99,99,0.267);
     font-weight: bold;
+    color: rgb(50, 50, 228);
 }
 
 .b2:hover {
@@ -132,6 +133,7 @@
 }
 
 .b3:hover {
-    background-color: rgb(243, 174, 226);
+    background-color: rgba(99,99,99,0.267);
     font-weight: bold;
+    color: rgb(243, 174, 226)
 }
