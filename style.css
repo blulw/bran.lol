@@ -1,0 +1,137 @@
+* { 
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+    font-family:cursive ;
+}
+
+#backvid {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+ }
+
+ .t1 {
+    margin-top:100px;
+    border-radius: 15px;
+    background-color: rgba(156, 156, 156, 0.267);
+    padding: 20px; 
+    width: 30%;
+    margin-left: 35%;
+    font-size: large;
+ }
+ #t1 {
+    justify-content: center;
+    text-align: center;
+    color: rgb(58, 58, 58);
+  }
+
+ .header {
+    margin-top: 5vw;
+    color:rgba(0, 0, 0, 0.801);
+    text-align: center;
+ }
+
+ body {
+    align-items: center;
+ }
+
+ #pfp {
+    width: 35%;
+    border-radius: 50%;
+    margin: 0 auto; /* Center horizontally */
+    display: block; /* Ensure margin: 0 auto works */
+ }
+
+ .singleCol {
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 20px;
+}
+
+.social-media-icons-white a {
+    color: white;
+    font-size: 3vw;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#discord:hover {
+    color:#5865F2;
+    scale:1.2;
+}
+
+#spotify:hover {
+    color: #1DB954;
+    scale:1.2;
+}
+
+#lastfm:hover {
+    color: #C3000D;
+    scale:1.2;
+}
+
+.b1 {
+    display:block;
+    text-decoration: none;
+    margin-top:100px;
+    border-radius: 15px;
+    background-color: rgba(156, 156, 156, 0.267);
+    padding: 20px; 
+    width:100%;
+    font-size: large;
+    color:white;
+}
+
+.b2 {
+    display:block;
+    text-decoration: none;
+    margin-top:100px;
+    border-radius: 15px;
+    background-color: rgba(156, 156, 156, 0.267);
+    padding: 20px; 
+    width:100%;
+    font-size: large;
+    color:white;
+}
+
+.b3 {
+    display:block;
+    text-decoration: none;
+    margin-top:100px;
+    border-radius: 15px;
+    background-color: rgba(156, 156, 156, 0.267);
+    padding: 20px; 
+    width:100%;
+    font-size: large;
+    color:white;
+}
+.b1:hover {
+    background-color: rgb(50, 50, 228);
+    font-weight: bold;
+}
+
+.b2:hover {
+    background-color: rgba(99, 99, 99, 0.267);
+    color: black;
+    font-weight:bold;
+}
+
+.b3:hover {
+    background-color: rgb(243, 174, 226);
+    font-weight: bold;
+}
