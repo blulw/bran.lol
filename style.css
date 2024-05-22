@@ -71,7 +71,7 @@
     color: rgb(58, 58, 58);
   }
 
- .header {
+ .bran {
     margin-top: 5vw;
     color:rgba(0, 0, 0, 0.801);
     text-align: center;
@@ -173,4 +173,13 @@
 .b3:hover {
     background-color: rgba(243, 174, 226, 0.733);
     font-weight: bold;
+}
+
+.note {
+    color: rgba(34, 34, 34, 0.699);
+    text-decoration: none;
+}
+
+.note:hover {
+    color: rgba(116, 116, 116, 0.699);
 }
