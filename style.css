@@ -84,8 +84,8 @@
  #pfp {
     width: 35%;
     border-radius: 50%;
-    margin: 0 auto; /* Center horizontally */
-    display: block; /* Ensure margin: 0 auto works */
+    margin: 0 auto;
+    display: block; 
  }
 
  .singleCol {
