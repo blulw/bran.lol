@@ -107,6 +107,7 @@ body {
     color: white;
     text-align: center;
     height: 60px; /* Ensure consistent height */
+    width:100px;
 }
 
 .b1:hover {
