@@ -192,3 +192,15 @@ body {
         align-items: center;
     }
 }
+#discord:hover {
+    color:#5865F2;
+    scale:1.2;
+}
+#spotify:hover {
+    color: #1DB954;
+    scale:1.2;
+}
+#lastfm:hover {
+    color: #C3000D;
+    scale:1.2;
+}
