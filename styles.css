@@ -25,11 +25,10 @@ body {
     background-attachment: fixed;
 }
 
-.header {
+.header, .headerh {
     text-align: center;
     margin-top: 20px;
 }
-
 .note {
     color: rgba(34, 34, 34, 0.699);
     text-decoration: none;
@@ -46,6 +45,13 @@ body {
     font-size: 2em;
 }
 
+.ts {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: block;
+}
+
 .t1 {
     margin: 0 auto;
     margin-top: 20px;
@@ -54,6 +60,18 @@ body {
     padding: 20px;
     width: 80vw;
     max-width: 400px;
+    font-size: large;
+    text-align: center;
+}
+
+.t2 {
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 15px;
+    background-color: rgba(156, 156, 156, 0.267);
+    padding: 20px;
+    width: 80vw;
+    max-width: 700px;
     font-size: large;
     text-align: center;
 }
@@ -92,6 +110,16 @@ body {
     align-items: center;
 }
 
+.htmlbackground {
+    background-image: linear-gradient(to bottom right, #FF5733, #5585b5);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.dpybackground {
+    background-image: linear-gradient(to bottom right, #5865F2, #ffd343);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 .b1, .b2, .b3 {
     display: flex;
     justify-content: center;
@@ -155,7 +183,32 @@ body {
         width: 70%;
     }
 }
+.languagetitle {
+    color: white;
+    font-size:30px;
+}
+.languages {
+    grid-column-gap: 70px;
+}
+.html {
+    color: #FF5733;
+}
+.css {
+    color: #5585b5;
+}
+.dpy {
+    color:#5865F2;
+}
 
+.html, .css, .dpy {
+    font-size:60px;
+}
+
+.dpyhref, .csshref, .htmlhref {
+    text-decoration: none;
+    color: white;
+    font-size: small;
+}
 @media only screen and (max-width: 480px) {
     .t1, .b1, .b2, .b3 {
         width: 90vw;
