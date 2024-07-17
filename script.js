@@ -5,40 +5,40 @@ document.addEventListener("DOMContentLoaded", () => {
         var number = Math.floor(Math.random() * 9);
 
     if (number == 0) {
-        var audio = new Audio("Flovry x tender spring - backpack City.mp3");
-        var text = new String("Flovry x tender spring - Backpack City")
+        var audio = new Audio("!sick.mp3");
+        var text = new String("sick - glaive")
     } 
     else if (number == 1) {
-        var audio = new Audio("Sorry for Not Answering the Phone I'm Too Busy Trying to Fly Away.mp3");
-        var text = new String("In Love With a Ghost - Sorry for Not Answering the Phone I'm Too Busy Trying to Fly Away")
+        var audio = new Audio("!BHSS03NOVAGOONNMNS - RED.mp3");
+        var text = new String("RED - BHSS03NOVAGOONNMNS")
     }
     else if (number == 2) {
-        var audio = new Audio("my heart flutters when i see you.mp3");
-        var text = new String("Biosphere - my heart flutters when i see you")
+        var audio = new Audio("!chanelfather - 1tap.mp3");
+        var text = new String("1tap - chanelfather")
     }
     else if (number == 3) {
-        var audio = new Audio("Je T’aime.mp3");
-        var text = new String("Sugi.wa - Je T’aime")
+        var audio = new Audio("!coke_blow.mp3");
+        var text = new String("coke//blow - glaive")
     }
     else if (number == 4) {
-        var audio = new Audio("it's finally raining again.mp3");
-        var text = new String("Elijah Who - it's finally raining again")
+        var audio = new Audio("!hissiest - wrong (prod. SweetBoobs).mp3");
+        var text = new String("wrong - hissiest")
     }
     else if (number == 5) {
-        var audio = new Audio("I Fell in Love with You One Night in September.mp3");
-        var text = new String("Rook1e - I Fell in Love with You One Night in September")
+        var audio = new Audio("!d0llywood1 - he's just like me (prod. wastedyouth)");
+        var text = new String("he's just like me - d0llywood1")
     }
     else if (number == 6) {
-        var audio = new Audio("haiku.mp3");
-        var text = new String("Nohidea - haiku")
+        var audio = new Audio("!findhelp.mp3");
+        var text = new String("findhelp - lieu")
     }
     else if (number == 7) {
-        var audio = new Audio("falling asleep at 3_37am.mp3");
-        var text = new String("idealism - falling asleep at 3:37am")
+        var audio = new Audio("!life is pain.mp3");
+        var text = new String("life is pain - glaive")
     }
     else if (number == 8) {
-        var audio = new Audio("coffee on the beach..mp3");
-        var text = new String("halberd - coffee on the beach.")
+        var audio = new Audio("!loose ties.mp3");
+        var text = new String("loose ties - ericdoa")
     }
     document.getElementById("current-song").innerHTML = text;
     audio.play();
