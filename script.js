@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
         var text = new String("wrong - hissiest")
     }
     else if (number == 5) {
-        var audio = new Audio("!d0llywood1 - he's just like me (prod. wastedyouth)");
+        var audio = new Audio("!d0llywood1 - he's just like me (prod. wastedyouth).mp3");
         var text = new String("he's just like me - d0llywood1")
     }
     else if (number == 6) {
