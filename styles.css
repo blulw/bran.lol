@@ -148,7 +148,7 @@ body {
     padding-top: 60px;
     font-size:24px
 }
-.b1, .b2, .b3 {
+.b1, .b2, .b3, .b4 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -181,9 +181,13 @@ body {
     font-weight: bold;
 }
 
+.b4:hover {
+    background-color: 	rgba(0, 74, 229, 0.733);
+    font-weight: bold;
+}
 /* Media Queries */
 @media only screen and (max-width: 1200px) {
-    .t1, .b1, .b2, .b3 {
+    .t1, .b1, .b2, .b3, .b4 {
         width: 70vw;
         font-size: medium;
     }
@@ -198,7 +202,7 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
-    .t1, .b1, .b2, .b3 {
+    .t1, .b1, .b2, .b3, .b4 {
         width: 85vw;
         font-size: medium;
     }
@@ -238,7 +242,7 @@ body {
     font-size: small;
 }
 @media only screen and (max-width: 480px) {
-    .t1, .b1, .b2, .b3 {
+    .t1, .b1, .b2, .b3, .b4 {
         width: 90vw;
         font-size: small;
         padding: 15px;
