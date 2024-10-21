@@ -124,16 +124,6 @@ body {
     font-size: 60px;
 }
 
-.htmlbackground {
-    background-image: linear-gradient(to bottom right, #FF5733, #5585b5);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-.dpybackground {
-    background-image: linear-gradient(to bottom right, #5865F2, #ffd343);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
 
 .fa-music {
     color:white;
@@ -185,7 +175,7 @@ body {
     background-color: 	rgba(0, 74, 229, 0.733);
     font-weight: bold;
 }
-/* Media Queries */
+
 @media only screen and (max-width: 1200px) {
     .t1, .b1, .b2, .b3, .b4 {
         width: 70vw;
@@ -246,7 +236,7 @@ body {
         width: 90vw;
         font-size: small;
         padding: 15px;
-        height: auto; /* Allow flexible height for smaller screens */
+        height: auto;
     }
 
     .social-media-icons-white a {
