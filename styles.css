@@ -234,6 +234,19 @@ body {
     font-size:60px;
 }
 
+@media only screen and (max-width: 768px) {
+    .singleCol {
+      flex-direction: column;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 10px;
+    }
+  
+    .singleCol > * {
+      margin: 10px 0;
+    }
+  }
+
 .dpyhref, .csshref, .htmlhref, .jshref, .pyhref {
     text-decoration: none;
     color: white;
