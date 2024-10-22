@@ -4,6 +4,7 @@
     padding: 0;
     margin: 0;
     font-family: "Comic Neue", cursive;
+    user-select: none;
 }
 
 body {
@@ -52,7 +53,7 @@ body {
     display: block;
 }
 
-.t1 {
+.profileBox {
     margin: 0 auto;
     margin-top: 20px;
     border-radius: 15px;
@@ -76,7 +77,7 @@ body {
     text-align: center;
 }
 
-#t1 {
+#profileBox {
     color: rgb(58, 58, 58);
 }
 
@@ -124,17 +125,6 @@ body {
     font-size: 60px;
 }
 
-.htmlbackground {
-    background-image: linear-gradient(to bottom right, #FF5733, #5585b5);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-.dpybackground {
-    background-image: linear-gradient(to bottom right, #5865F2, #ffd343);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
 .fa-music {
     color:white;
 }
@@ -146,7 +136,8 @@ body {
 
 .song {
     padding-top: 60px;
-    font-size:24px
+    font-size:24px;
+    color:white;
 }
 .b1, .b2, .b3, .b4 {
     display: flex;
@@ -187,7 +178,7 @@ body {
 }
 /* Media Queries */
 @media only screen and (max-width: 1200px) {
-    .t1, .b1, .b2, .b3, .b4 {
+    .profileBox, .b1, .b2, .b3, .b4 {
         width: 70vw;
         font-size: medium;
     }
@@ -202,7 +193,7 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
-    .t1, .b1, .b2, .b3, .b4 {
+    .profileBox, .b1, .b2, .b3, .b4 {
         width: 85vw;
         font-size: medium;
     }
@@ -232,17 +223,21 @@ body {
     color:#5865F2;
 }
 
-.html, .css, .dpy {
+.js {
+    color: #f7df1e;
+}
+
+.html, .css, .dpy, .js{
     font-size:60px;
 }
 
-.dpyhref, .csshref, .htmlhref {
+.dpyhref, .csshref, .htmlhref, .jshref {
     text-decoration: none;
     color: white;
     font-size: small;
 }
 @media only screen and (max-width: 480px) {
-    .t1, .b1, .b2, .b3, .b4 {
+    .profileBox, .b1, .b2, .b3, .b4 {
         width: 90vw;
         font-size: small;
         padding: 15px;
