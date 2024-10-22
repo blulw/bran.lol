@@ -11,39 +11,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
         switch (number) {
             case 0:
-                audio = new Audio("https://www.dropbox.com/scl/fi/j8qix48xrm3wva6omeccb/sick.mp3?rlkey=s6dytwpzcdmbgst8rlnvllqnf&st=2mv93s7f&dl=1");
+                audio = new Audio("!sick.mp3");
                 text = "sick - glaive";
                 break;
             case 1:
-                audio = new Audio("https://www.dropbox.com/scl/fi/zdd7bwfc4366h4wnlyasj/BHSS03NOVAGOONNMNS-RED.mp3?rlkey=nzmw7soaab6qs7f2aghg1mk48&st=uzmkbqs5&dl=1");
+                audio = new Audio("!BHSS03NOVAGOONNMNS - RED.mp3");
                 text = "RED - BHSS03NOVAGOONNMNS";
                 break;
             case 2:
-                audio = new Audio("https://www.dropbox.com/scl/fi/3jdbrvokyxm90racepx68/chanelfather-1tap.mp3?rlkey=owpcz7jpepgpfcafuqn8dbo5j&st=nq9rgrmz&dl=1");
+                audio = new Audio("!chanelfather - 1tap.mp3");
                 text = "1tap - chanelfather";
                 break;
             case 3:
-                audio = new Audio("https://www.dropbox.com/scl/fi/q20fysysqr6ryc4zsgqsx/coke_blow.mp3?rlkey=eiptnu6utz1fqvfbtq1r22a86&st=wlf6zlz3&dl=1");
+                audio = new Audio("!coke_blow.mp3");
                 text = "coke//blow - glaive";
                 break;
             case 4:
-                audio = new Audio("https://www.dropbox.com/scl/fi/hcmilz126hb4ndlxf7v01/hissiest-wrong-prod.-SweetBoobs.mp3?rlkey=05bcp4tg21qi4nziz7wja6z65&st=4ja9frkn&dl=1");
+                audio = new Audio("!hissiest - wrong (prod. SweetBoobs).mp3");
                 text = "wrong - hissiest";
                 break;
             case 5:
-                audio = new Audio("https://www.dropbox.com/scl/fi/w4fmk6h23msczd2jtx9hn/d0llywood1-he-s-just-like-me-prod.-wastedyouth.mp3?rlkey=oe6wv9bjaeifhqniqtblmq9l3&st=x2wgyssj&dl=1");
+                audio = new Audio("!d0llywood1 - he's just like me (prod. wastedyouth).mp3");
                 text = "he's just like me - d0llywood1";
                 break;
             case 6:
-                audio = new Audio("https://www.dropbox.com/scl/fi/fhiz7zxbjjt5uh495mp7u/findhelp.mp3?rlkey=9aah1rp5wfx6h9btow4d0fdqj&st=sj7swurv&dl=1");
+                audio = new Audio("!findhelp.mp3");
                 text = "findhelp - lieu";
                 break;
             case 7:
-                audio = new Audio("https://www.dropbox.com/scl/fi/mnqg0pisuikpez60r55uc/life-is-pain.mp3?rlkey=yjwraillk3prpxg7libybjsyu&st=fy5qxe5z&dl=1");
+                audio = new Audio("!life is pain.mp3");
                 text = "life is pain - glaive";
                 break;
             case 8:
-                audio = new Audio("https://www.dropbox.com/scl/fi/t1ij3f5afqt8pvs7mcgkd/loose-ties.mp3?rlkey=eejd7yvtgc88u421uktbwkc0x&st=w2o8xmuz&dl=1");
+                audio = new Audio("!loose ties.mp3");
                 text = "loose ties - ericdoa";
                 break;
         }
