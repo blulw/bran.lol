@@ -222,16 +222,19 @@ body {
 .dpy {
     color:#5865F2;
 }
+.py {
+    color: #FFD43B;
+}
 
 .js {
     color: #f7df1e;
 }
 
-.html, .css, .dpy, .js{
+.html, .css, .dpy, .js, .py{
     font-size:60px;
 }
 
-.dpyhref, .csshref, .htmlhref, .jshref {
+.dpyhref, .csshref, .htmlhref, .jshref, .pyhref {
     text-decoration: none;
     color: white;
     font-size: small;
