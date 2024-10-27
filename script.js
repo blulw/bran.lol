@@ -15,35 +15,35 @@ document.addEventListener("DOMContentLoaded", () => {
                 text = "sick - glaive";
                 break;
             case 1:
-                audio = new Audio("!BHSS03NOVAGOONNMNS - RED.mp3");
+                audio = new Audio("https://github.com/blulw/bran.lol/blob/media/music/RED.mp3?raw=true");
                 text = "RED - BHSS03NOVAGOONNMNS";
                 break;
             case 2:
-                audio = new Audio("!chanelfather - 1tap.mp3");
+                audio = new Audio("https://github.com/blulw/bran.lol/blob/media/music/1tap.mp3?raw=true");
                 text = "1tap - chanelfather";
                 break;
             case 3:
-                audio = new Audio("!coke_blow.mp3");
+                audio = new Audio("https://github.com/blulw/bran.lol/blob/media/music/coke.mp3?raw=true");
                 text = "coke//blow - glaive";
                 break;
             case 4:
-                audio = new Audio("!hissiest - wrong (prod. SweetBoobs).mp3");
+                audio = new Audio("https://github.com/blulw/bran.lol/blob/media/music/wrong.mp3?raw=true");
                 text = "wrong - hissiest";
                 break;
             case 5:
-                audio = new Audio("!d0llywood1 - he's just like me (prod. wastedyouth).mp3");
+                audio = new Audio("https://github.com/blulw/bran.lol/blob/media/music/justlikeme.mp3?raw=true");
                 text = "he's just like me - d0llywood1";
                 break;
             case 6:
-                audio = new Audio("!findhelp.mp3");
+                audio = new Audio("https://github.com/blulw/bran.lol/blob/media/music/findhelp.mp3?raw=true");
                 text = "findhelp - lieu";
                 break;
             case 7:
-                audio = new Audio("!life is pain.mp3");
+                audio = new Audio("https://github.com/blulw/bran.lol/blob/media/music/pain.mp3?raw=true");
                 text = "life is pain - glaive";
                 break;
             case 8:
-                audio = new Audio("!loose ties.mp3");
+                audio = new Audio("https://github.com/blulw/bran.lol/blob/media/music/loose.mp3?raw=true");
                 text = "loose ties - ericdoa";
                 break;
         }
