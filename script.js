@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         switch (number) {
             case 0:
-                audio = new Audio("!sick.mp3");
+                audio = new Audio("https://github.com/blulw/bran.lol/blob/media/music/sick.mp3?raw=true");
                 text = "sick - glaive";
                 break;
             case 1:
