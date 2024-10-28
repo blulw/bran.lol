@@ -1,13 +1,97 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://kit.fontawesome.com/4d5a638491.js" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+        <title>randon</title>
         <link rel="icon" href="favicon.ico">
-        <meta content="Page not found" property="og:title" />
-        <meta content="This page does not exist" property="og:description" />
+        <meta content="bran" property="og:title" />
+        <meta content="16 year old chronically online compsci student" property="og:description" />
         <meta content="https://bran.lol/" property="og:url" />
         <meta content="https://github.com/blulw/bran.lol/blob/media/glaive.png?raw=true" property="og:image" />
         <meta content="#B4B4B4" data-react-helmet="true" name="theme-color" />
+    </head>
     <body>
-        Page not found
+        <img src="https://github.com/blulw/bran.lol/blob/media/bg.gif?raw=true" id="backvid">
+
+        <div class="header">
+            <h1 class="bran">bran</h1>
+        </div>
+
+        <div class="profileBox">
+            <img src="https://github.com/blulw/bran.lol/blob/media/pfp.png?raw=true" id="pfp">
+            <div class="container">
+                <div class="singleCol social-media-icons-white">
+                    <a href="https://discord.com/users/817475032112037888" id="discord">
+                        <i class="fa-brands fa-discord"></i>
+                    </a>
+                    <a href="https://open.spotify.com/user/31afbvnmlmmvxqwc547s2qtcb62u?si=bdc903360a7c414d" id="spotify">
+                        <i class="fa-brands fa-spotify"></i>
+                    </a>
+                    <a href="https://last.fm/user/blulw" id="lastfm">
+                        <i class="fa-brands fa-lastfm"></i>
+                    </a>
+                </div>
+            </div>
+            <p id="profileBox">16 year old chronically online compsci student <br> i love glaive </p>
+        </div>
+
+        <div class="singleCol buttons">
+            <a href="mailto:brandonlmfaoooo@gmail.com" class="b1">
+                <p>Email</p>
+            </a>
+            <a href="https://anilist.co/user/blulw/" class="b2">
+                <p>AniList</p>
+            </a>
+            <a href="https://github.com/blulw/" class="b3">
+                <p>GitHub</p>
+            </a>
+            <a href="./bio" class="b4">
+                <p>E-Z Bio</p>
+            </a>
+        </div>
+        <p class="singleCol languagetitle">
+            languages i've used
+        </p>
+        <div class="singleCol languages">
+            <a href="./web" class="htmlhref">
+                <i class="fa-brands fa-html5 html"></i>
+                <p>html</p>
+            </a>
+            <a href="./web" class="csshref">
+                <i class="fa-brands fa-css3-alt css"></i>
+                <p>css</p>
+            </a>
+            <a href="./web" class="jshref">
+                <i class="fa-brands fa-js js"></i>
+                <p>javascript</p>
+            </a>
+            <a href="./py" class="dpyhref">
+                <i class="fa-brands fa-discord dpy"></i>
+                <p>discord.py</p>  
+            </a>
+            <a href="./py" class="pyhref">
+                <i class="fa-brands fa-python py"></i>
+                <p>python</p>
+            </a>
+        </div>
+        <audio id="audio" loop src=""></audio>
+        <div id="autoplay-fix">
+            click
+        </div>
+        <div class="singleCol song">
+            <div id="song-buttons">
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-music"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 17a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M13 17a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M9 17v-13h10v13" /><path d="M9 8h10" /></svg>
+            </div>
+            <p id="current-song"></p>
+        </div>
     </body>
 </html>
