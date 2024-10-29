@@ -50,6 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
         document.getElementById("current-song").innerHTML = text;
+        document.getElementById("audio").loop = true;
         audio.play();
         button.style.display = 'none';
     };
