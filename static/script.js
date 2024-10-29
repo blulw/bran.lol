@@ -11,39 +11,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
         switch (number) {
             case 0:
-                audio = new Audio("https://media.bran.lol/files/music/sick.mp3");
+                audio = new Audio("https://media.bran.lol/music/sick.mp3");
                 text = "sick - glaive";
                 break;
             case 1:
-                audio = new Audio("https://media.bran.lol/files/music/RED.mp3");
+                audio = new Audio("https://media.bran.lol/music/RED.mp3");
                 text = "RED - BHSS03NOVAGOONNMNS";
                 break;
             case 2:
-                audio = new Audio("https://media.bran.lol/files/music/1tap.mp3");
+                audio = new Audio("https://media.bran.lol/music/1tap.mp3");
                 text = "1tap - chanelfather";
                 break;
             case 3:
-                audio = new Audio("https://media.bran.lol/files/music/coke.mp3");
+                audio = new Audio("https://media.bran.lol/music/coke.mp3");
                 text = "coke//blow - glaive";
                 break;
             case 4:
-                audio = new Audio("https://media.bran.lol/files/music/wrong.mp3");
+                audio = new Audio("https://media.bran.lol/music/wrong.mp3");
                 text = "wrong - hissiest";
                 break;
             case 5:
-                audio = new Audio("https://media.bran.lol/files/music/justlikeme.mp3");
+                audio = new Audio("https://media.bran.lol/music/justlikeme.mp3");
                 text = "he's just like me - d0llywood1";
                 break;
             case 6:
-                audio = new Audio("https://media.bran.lol/files/music/findhelp.mp3");
+                audio = new Audio("https://media.bran.lol/music/findhelp.mp3");
                 text = "findhelp - lieu";
                 break;
             case 7:
-                audio = new Audio("https://media.bran.lol/files/music/pain.mp3");
+                audio = new Audio("https://media.bran.lol/music/pain.mp3");
                 text = "life is pain - glaive";
                 break;
             case 8:
-                audio = new Audio("https://media.bran.lol/files/music/loose.mp3");
+                audio = new Audio("https://media.bran.lol/music/loose.mp3");
                 text = "loose ties - ericdoa";
                 break;
         }
