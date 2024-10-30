@@ -169,8 +169,8 @@ async def fetch_user_file(filename: str):
                             display: flex;
                             justify-content: center;
                             align-items: center;
-                            max-width: 100%;
-                            max-height: 80vh;
+                            max-width: 40%;
+                            max-height: 40vh;
                             overflow: hidden;
                             padding: 10px;
                             box-sizing: border-box;
