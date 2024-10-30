@@ -32,6 +32,24 @@ body {
     text-decoration: none;
 }
 
+#submit {
+    background-color: lime;
+    border-radius: 5%;
+    width: 10rem;
+    height: 2.5rem;
+    border-color: dimgrey;
+    border-style: solid;
+
+}
+
+.flex-container {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+}
+
 .note:hover {
     color: rgba(116, 116, 116, 0.699);
 }
