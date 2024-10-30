@@ -2,6 +2,7 @@ from fastapi import FastAPI, HTTPException, Response
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse, RedirectResponse
 import httpx
+
 app = FastAPI()
 
 app.mount("/static", StaticFiles(directory="./static"), name="static")
@@ -31,6 +32,7 @@ async def bran():
 async def web():
     return FileResponse("templates/web.html")
 
+
 @app.get("/upload")
 async def upload():
     return FileResponse("templates/upload.html")
@@ -39,6 +41,7 @@ async def upload():
 @app.get("/bio")
 async def bio():
     return RedirectResponse("https://e-z.bio/bran")
+
 
 @app.get("/file/{filename}")
 async def fetch_user_file(filename: str):
@@ -53,16 +56,22 @@ async def fetch_user_file(filename: str):
 
         return Response(
             content=response.content,
-            media_type=response.headers.get("content-type", "application/octet-stream"),
+            media_type=response.headers.get(
+                "content-type", "application/octet-stream"),
             headers={"Content-Disposition": f"inline; filename={filename}"}
         )
 
     except httpx.RequestError:
-        raise HTTPException(status_code=500, detail="Error retrieving file from api.bran.lol.")
+        raise HTTPException(
+            status_code=500, detail="Error retrieving file from api.bran.lol.")
 
-app.get("/{path:path}")
+# This should be the last route
+
+
+@app.get("/{path:path}")
 async def catch_all(path: str):
     return FileResponse("templates/404.html")
+
 
 def main() -> None:
     import uvicorn
