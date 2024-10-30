@@ -169,16 +169,14 @@ async def fetch_user_file(filename: str):
                             display: flex;
                             justify-content: center;
                             align-items: center;
-                            max-width: 60%;
-                            max-height: 40%;
                             overflow: hidden;
                             padding: 10px;
                             box-sizing: border-box;
                             margin: 0 auto;
                         }}
                         #img-container img {{
-                            max-width: 100%;
-                            max-height: 100%;
+                            max-width: 60%;
+                            max-height: 40%;
                             width: auto;
                             height: auto;
                             display: block;
