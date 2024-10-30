@@ -40,11 +40,6 @@ async def upload():
 async def bio():
     return RedirectResponse("https://e-z.bio/bran")
 
-
-@app.get("/success")
-async def success():
-    return FileResponse("templates/success.html")
-
 @app.get("/file/{filename}")
 async def fetch_user_file(filename: str):
     file_url = f"https://api.bran.lol/userfiles/{filename}"
@@ -54,7 +49,7 @@ async def fetch_user_file(filename: str):
             response = await client.get(file_url)
 
         if response.status_code != 200:
-            raise HTTPException(status_code=response.status_code, detail="File not found or inaccessible.")
+            return FileResponse("templates/404.html")
 
         return Response(
             content=response.content,
@@ -68,7 +63,6 @@ async def fetch_user_file(filename: str):
 app.get("/{path:path}")
 async def catch_all(path: str):
     return FileResponse("templates/404.html")
-
 
 def main() -> None:
     import uvicorn
