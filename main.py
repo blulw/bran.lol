@@ -63,10 +63,9 @@ async def success(filename: str = "filename"):
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
-            <link rel="icon" href="favicon.ico">
+            <link rel="icon" href="https://media.bran.lol/favicon.ico">
             <link rel="stylesheet" href="/static/styles.css">
-            <meta content="Page not found" property="og:title" />
-            <meta content="This page does not exist" property="og:description" />
+            <meta content="File Upload Success" property="og:title" />
             <meta content="https://bran.lol/" property="og:url" />
             <meta content="https://media.bran.lol/glaive.png" property="og:image" />
             <meta content="#B4B4B4" data-react-helmet="true" name="theme-color" />
@@ -103,7 +102,7 @@ async def success(filename: str = "filename"):
     return HTMLResponse(content=html_content)
 
 
-@app.get("/{filename}", response_class=HTMLResponse)
+@app.get("/file/{filename}", response_class=HTMLResponse)
 async def fetch_user_file(filename: str):
     decoded_filename = urllib.parse.unquote(filename)
     file_url = f"https://api.bran.lol/userfiles/{decoded_filename}"
@@ -136,14 +135,15 @@ async def fetch_user_file(filename: str):
                     <meta property="og:description" content="File: {decoded_filename}&#10;File Size: {formatted_size}" />
                     <meta property="og:image" content="{file_url}" />
                     <meta property="og:url" content="https://bran.lol/" />
+                    <meta name="twitter:card" content="summary_large_image" />
                     <title>{decoded_filename}</title>
-                    <link rel="icon" href="favicon.ico">
+                    <link rel="stylesheet" href="/static/styles.css">
+                    <link rel="icon" href="https://media.bran.lol/favicon.ico">
                     <style>
                         body {{
-                            font-family: Arial, sans-serif;
+                            
                             text-align: center;
-                            background-color: #0b0b0b;
-                            color: #fff;
+                            color: black;
                             margin: 0;
                             padding: 20px;
                         }}
@@ -163,7 +163,7 @@ async def fetch_user_file(filename: str):
                             border-radius: 5px;
                         }}
                         a:hover {{
-                            background-color: #eaeaea;
+                            background-color: #a6a6a6;
                         }}
                         #img-container {{
                             display: flex;
@@ -191,11 +191,12 @@ async def fetch_user_file(filename: str):
                     </style>
                 </head>
                 <body>
+                    <img src="https://media.bran.lol/bg.gif" id="backvid">
                     <h1>{decoded_filename}</h1>
                     <p>File size: {formatted_size}</p>
                     <a href="{file_url}" download="{decoded_filename}">Download</a>
                     <div id="img-container">
-                        <img src="{file_url}" alt="{decoded_filename}" />
+                        <img src="{file_url}" alt="{decoded_filename}"/>
                     </div>
                 </body>
             </html>
