@@ -6,12 +6,10 @@ import urllib.parse
 
 app = FastAPI()
 
-
 @app.middleware("http")
 async def log_requests(request: Request, call_next):
     print(f"Request: {request.method} {request.url}")
     response = await call_next(request)
-    print(f"Response: {response.status_code}")
     return response
 
 app.mount("/static", StaticFiles(directory="./static"), name="static")
@@ -51,9 +49,9 @@ async def upload():
 async def bio():
     return RedirectResponse("https://e-z.bio/bran")
 
-
 @app.post("/success", response_class=HTMLResponse)
-async def success(filename: str):
+async def success(filename: str = "filename"):
+
     safe_filename = urllib.parse.quote(filename)
 
     html_content = f"""
@@ -101,8 +99,6 @@ async def success(filename: str):
     </html>
     """
     return HTMLResponse(content=html_content)
-
-
 @app.get("/file/{filename}")
 async def fetch_user_file(filename: str):
     decoded_filename = urllib.parse.unquote(filename)
@@ -116,10 +112,8 @@ async def fetch_user_file(filename: str):
         if response.status_code == 200:
             return Response(
                 content=response.content,
-                media_type=response.headers.get(
-                    "content-type", "application/octet-stream"),
-                headers={
-                    "Content-Disposition": f"inline; filename={decoded_filename}"}
+                media_type=response.headers.get("content-type", "application/octet-stream"),
+                headers={"Content-Disposition": f"inline; filename={decoded_filename}"}
             )
         else:
             return FileResponse("templates/404.html")
@@ -129,6 +123,9 @@ async def fetch_user_file(filename: str):
             status_code=500,
             detail=f"Error retrieving file from api.bran.lol: {str(e)}"
         )
+
+
+#This should be the last route
 
 
 @app.get("/{path:path}")
