@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException, Response
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse, RedirectResponse
 import httpx
@@ -41,14 +41,9 @@ async def bio():
     return RedirectResponse("https://e-z.bio/bran")
 
 
-@app.get("/{path:path}")
-async def catch_all(path: str):
-    return FileResponse("templates/404.html")
-
-
-def main() -> None:
-    import uvicorn
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+@app.get("/success")
+async def success():
+    return FileResponse("templates/success.html")
 
 @app.get("/file/{filename}")
 async def fetch_user_file(filename: str):
@@ -63,12 +58,22 @@ async def fetch_user_file(filename: str):
 
         return Response(
             content=response.content,
-            media_type=response.headers.get("content-type"),
+            media_type=response.headers.get("content-type", "application/octet-stream"),
             headers={"Content-Disposition": f"inline; filename={filename}"}
         )
 
     except httpx.RequestError:
         raise HTTPException(status_code=500, detail="Error retrieving file from api.bran.lol.")
+
+app.get("/{path:path}")
+async def catch_all(path: str):
+    return FileResponse("templates/404.html")
+
+
+def main() -> None:
+    import uvicorn
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+
 
 if __name__ == "__main__":
     main()
