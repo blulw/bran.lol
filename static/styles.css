@@ -65,6 +65,7 @@ form {
     border-radius: 0.5rem;
     border: 1px solid #ccc;
     font-size: 1rem;
+    border-color: black;
 }
 
 #styled-button:focus {
