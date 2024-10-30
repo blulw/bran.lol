@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse, RedirectResponse
-
+import httpx
 app = FastAPI()
 
 app.mount("/static", StaticFiles(directory="./static"), name="static")
@@ -31,6 +31,10 @@ async def bran():
 async def web():
     return FileResponse("templates/web.html")
 
+@app.get("/upload")
+async def upload():
+    return FileResponse("templates/upload.html")
+
 
 @app.get("/bio")
 async def bio():
@@ -46,6 +50,25 @@ def main() -> None:
     import uvicorn
     uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
 
+@app.get("/file/{filename}")
+async def fetch_user_file(filename: str):
+    file_url = f"https://api.bran.lol/userfiles/{filename}"
+
+    try:
+        async with httpx.AsyncClient() as client:
+            response = await client.get(file_url)
+
+        if response.status_code != 200:
+            raise HTTPException(status_code=response.status_code, detail="File not found or inaccessible.")
+
+        return Response(
+            content=response.content,
+            media_type=response.headers.get("content-type"),
+            headers={"Content-Disposition": f"inline; filename={filename}"}
+        )
+
+    except httpx.RequestError:
+        raise HTTPException(status_code=500, detail="Error retrieving file from api.bran.lol.")
 
 if __name__ == "__main__":
     main()
