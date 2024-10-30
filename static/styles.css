@@ -60,7 +60,7 @@ form {
 }
 
 
-#styled-button {
+.styled-button {
     padding: 0.5rem;
     border-radius: 0.5rem;
     border: 1px solid #ccc;
@@ -68,7 +68,7 @@ form {
     border-color: black;
 }
 
-#styled-button:focus {
+.styled-button:focus {
     border-color:darkslategrey;
     outline: none;
 }
