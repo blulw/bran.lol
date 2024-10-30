@@ -64,13 +64,23 @@ form {
     padding: 0.5rem;
     border-radius: 0.5rem;
     border: 1px solid #ccc;
-    font-size: 1rem;
+    font-size: 2rem;
     border-color: black;
+    width: 16rem;
+    height: 4rem;
+    text-align: center;
+    align-items: center;
+    background-color: rgba(93,93,93,0.25);
 }
 
-.styled-button:focus {
+#submit:hover {
+    background-color: limegreen;
+}
+
+.styled-button:hover {
     border-color:darkslategrey;
     outline: none;
+    background-color: rgba(93,93,93,0.75);
 }
 
 .note:hover {
