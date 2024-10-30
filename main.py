@@ -201,7 +201,6 @@ async def fetch_user_file(filename: str):
             """
             return HTMLResponse(content=html_content, status_code=200)
         else:
-            html_content = ""
             return FileResponse("templates/404.html")
 
     except httpx.RequestError as e:
