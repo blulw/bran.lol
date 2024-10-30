@@ -1,10 +1,11 @@
-from fastapi import FastAPI, HTTPException, Response, Request
+from fastapi.responses import HTMLResponse, FileResponse, RedirectResponse
+from fastapi import FastAPI, HTTPException, Request
 from fastapi.staticfiles import StaticFiles
-from fastapi.responses import FileResponse, RedirectResponse, HTMLResponse
 import httpx
 import urllib.parse
 
 app = FastAPI()
+
 
 @app.middleware("http")
 async def log_requests(request: Request, call_next):
@@ -48,6 +49,7 @@ async def upload():
 @app.get("/bio")
 async def bio():
     return RedirectResponse("https://e-z.bio/bran")
+
 
 @app.post("/success", response_class=HTMLResponse)
 async def success(filename: str = "filename"):
@@ -99,10 +101,11 @@ async def success(filename: str = "filename"):
     </html>
     """
     return HTMLResponse(content=html_content)
-@app.get("/file/{filename}")
+
+
+@app.get("/{filename}", response_class=HTMLResponse)
 async def fetch_user_file(filename: str):
     decoded_filename = urllib.parse.unquote(filename)
-
     file_url = f"https://api.bran.lol/userfiles/{decoded_filename}"
 
     try:
@@ -110,11 +113,94 @@ async def fetch_user_file(filename: str):
             response = await client.get(file_url)
 
         if response.status_code == 200:
-            return Response(
-                content=response.content,
-                media_type=response.headers.get("content-type", "application/octet-stream"),
-                headers={"Content-Disposition": f"inline; filename={decoded_filename}"}
-            )
+            content_length = response.headers.get("Content-Length")
+            if content_length is not None:
+                file_size = int(content_length)
+                if file_size >= 1024 ** 3:
+                    formatted_size = f"{file_size / 1024 ** 3:.2f} GB"
+                elif file_size >= 1024 ** 2:
+                    formatted_size = f"{file_size / 1024 ** 2:.2f} MB"
+                elif file_size >= 1024:
+                    formatted_size = f"{file_size / 1024:.2f} KB"
+                else:
+                    formatted_size = f"{file_size} bytes"
+            else:
+                formatted_size = "Unknown size"
+
+            html_content = f"""
+            <html>
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <meta property="og:title" content="{decoded_filename} - bran.lol" />
+                    <meta property="og:description" content="File: {decoded_filename}&#10;File Size: {formatted_size}" />
+                    <meta property="og:image" content="{file_url}" />
+                    <meta property="og:url" content="https://bran.lol/" />
+                    <title>{decoded_filename}</title>
+                    <link rel="icon" href="favicon.ico">
+                    <style>
+                        body {{
+                            font-family: Arial, sans-serif;
+                            text-align: center;
+                            background-color: #0b0b0b;
+                            color: #fff;
+                            margin: 0;
+                            padding: 20px;
+                        }}
+                        h1 {{
+                            margin-top: 20px;
+                        }}
+                        p {{
+                            margin: 10px 0;
+                        }}
+                        a {{
+                            display: inline-block;
+                            margin: 20px 0;
+                            padding: 10px 20px;
+                            color: #1a1a1a;
+                            text-decoration: none;
+                            background-color: #fafafa;
+                            border-radius: 5px;
+                        }}
+                        a:hover {{
+                            background-color: #eaeaea;
+                        }}
+                        #img-container {{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            max-width: 100%;
+                            max-height: 80vh;
+                            overflow: hidden;
+                            padding: 10px;
+                            box-sizing: border-box;
+                            margin: 0 auto;
+                        }}
+                        #img-container img {{
+                            max-width: 100%;
+                            max-height: 100%;
+                            width: auto;
+                            height: auto;
+                            display: block;
+                        }}
+                        @media (max-width: 768px) {{
+                            #img-container {{
+                                max-height: 60vh;
+                            }}
+                        }}
+                    </style>
+                </head>
+                <body>
+                    <h1>{decoded_filename}</h1>
+                    <p>File size: {formatted_size}</p>
+                    <a href="{file_url}" download="{decoded_filename}">Download</a>
+                    <div id="img-container">
+                        <img src="{file_url}" alt="{decoded_filename}" />
+                    </div>
+                </body>
+            </html>
+            """
+            return HTMLResponse(content=html_content, status_code=200)
         else:
             return FileResponse("templates/404.html")
 
@@ -125,10 +211,10 @@ async def fetch_user_file(filename: str):
         )
 
 
-#This should be the last route
+# This should be the last route
 
 
-@app.get("/{path:path}")
+@ app.get("/{path:path}")
 async def catch_all(path: str):
     return FileResponse("templates/404.html")
 
