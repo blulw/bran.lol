@@ -25,7 +25,8 @@
     <div class="flex-container">
         <form action="https://api.bran.lol/submitform" method="POST" enctype="multipart/form-data">
             <!-- <input type="text" name="assignment" placeholder="text" required> -->
-            <input type="file" name="assignment_file" id="fileinput" required>
+            <input type="file" name="assignment_file" id="fileinput" required style="display: none;">
+            <label for="fileinput" class="styled-button">Upload File</label>
             <input type="submit" id="submit" value="Submit">
         </form>
     </div>
