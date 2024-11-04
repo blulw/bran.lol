@@ -52,6 +52,7 @@ async def upload():
 async def bio():
     return RedirectResponse("https://e-z.bio/bran")
 
+@app.get("/stats", response_class=HTMLResponse)
 @app.post("/stats", response_class=HTMLResponse)
 async def stats(username: str = "aiden"):
 
