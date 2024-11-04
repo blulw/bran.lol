@@ -3,7 +3,9 @@ from fastapi import FastAPI, HTTPException, Request
 from fastapi.staticfiles import StaticFiles
 import httpx
 import urllib.parse
-
+import cloudscraper
+import json
+import re
 app = FastAPI()
 
 
@@ -50,6 +52,67 @@ async def upload():
 async def bio():
     return RedirectResponse("https://e-z.bio/bran")
 
+@app.post("/stats", response_class=HTMLResponse)
+async def stats(username: str = "aiden"):
+
+    scraper = cloudscraper.create_scraper()
+
+
+    url = f'https://e-z.bio/{username}'
+
+
+    response = scraper.get(url)
+
+    views = 0 
+
+    if response.status_code == 200:
+
+        match = re.search(r'<script id="__NEXT_DATA__" type="application/json">(.*?)</script>', response.text, re.DOTALL)
+
+        if match:
+            json_data = match.group(1)
+            data = json.loads(json_data)
+            
+
+            views = data['props']['pageProps']['bio']['views']
+        else:
+            return HTMLResponse(content="Could not find the JSON data.", status_code=500)
+    else:
+        return HTMLResponse(content="Request failed with status code: " + str(response.status_code), status_code=response.status_code)
+    html_content = f"""
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+            <link rel="icon" href="https://media.bran.lol/favicon.ico">
+            <link rel="stylesheet" href="/static/styles.css">
+            <meta content="File Upload Success" property="og:title" />
+            <meta content="https://bran.lol/" property="og:url" />
+            <meta content="https://media.bran.lol/glaive.png" property="og:image" />
+            <meta content="#B4B4B4" data-react-helmet="true" name="theme-color" />
+        </head>
+        <body>
+            <img src="https://media.bran.lol/bg.gif" id="backvid" alt="Background Video">
+            Username: {username} <br>
+            View Count: {views} <br>
+            <form action="/stats" method="POST" enctype="multipart/form-data">
+                <input type="text" name="username" placeholder="username" required>
+                <input type="submit" id="submit" value="Submit">
+            </form>
+        </body>
+        <style>
+          body {{
+              background-color: #1a1a1a;
+              font-size: 2rem;
+              text-align: center;
+              margin-top: 25%;
+          }}
+        </style>
+    </html>
+    """
+    return HTMLResponse(content=html_content)
 
 @app.post("/success", response_class=HTMLResponse)
 async def success(filename: str = "filename"):
