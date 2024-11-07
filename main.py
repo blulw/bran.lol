@@ -3,9 +3,7 @@ from fastapi import FastAPI, HTTPException, Request
 from fastapi.staticfiles import StaticFiles
 import httpx
 import urllib.parse
-import cloudscraper
-import json
-import re
+
 app = FastAPI()
 
 
@@ -52,6 +50,7 @@ async def upload():
 async def bio():
     return RedirectResponse("https://e-z.bio/bran")
 
+<<<<<<< HEAD
 @app.get("/stats", response_class=HTMLResponse)
 @app.post("/stats", response_class=HTMLResponse)
 async def stats(username: str = "aiden"):
@@ -114,6 +113,8 @@ async def stats(username: str = "aiden"):
     </html>
     """
     return HTMLResponse(content=html_content)
+=======
+>>>>>>> parent of 346e1dc (Update main.py)
 
 @app.post("/success", response_class=HTMLResponse)
 async def success(filename: str = "filename"):
