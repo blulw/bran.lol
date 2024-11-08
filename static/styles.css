@@ -7,10 +7,6 @@
   text-decoration: none;
 }
 
-.whitetext {
-  color: white;
-}
-
 body {
   align-items: center;
   background: none;
@@ -283,17 +279,6 @@ form {
   font-size: 1rem;
 }
 
-#discord {
-  color: white;
-}
-
-#spotify {
-  color: white;
-}
-
-#lastfm {
-  color: white;
-}
 
 #discord:hover {
   color: #5865f2;
