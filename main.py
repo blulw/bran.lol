@@ -23,7 +23,7 @@ async def root():
 
 @app.get("/py")
 async def py():
-    return FileResponse("templates/projects/py.html")
+    return FileResponse("templates/py.html")
 
 
 @app.get("/keiran")
@@ -38,7 +38,7 @@ async def bran():
 
 @app.get("/web")
 async def web():
-    return FileResponse("templates/projects/web.html")
+    return FileResponse("templates/web.html")
 
 
 @app.get("/upload")
