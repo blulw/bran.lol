@@ -1,272 +1,295 @@
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: "Comic Neue", cursive;
-    user-select: none;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Comic Neue", cursive;
+  user-select: none;
+  text-decoration: none;
 }
 
 body {
-    align-items: center;
-    background: none;
+  align-items: center;
+  background: none;
 }
 
 #backvid {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    background-attachment: fixed;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-attachment: fixed;
 }
 
-.header, .headerh {
-    text-align: center;
-    margin-top: 1.5rem;
+.header,
+.headerh {
+  text-align: center;
+  margin-top: 1.5rem;
 }
 
 .note {
-    color: rgba(34, 34, 34, 0.699);
-    text-decoration: none;
+  color: rgba(34, 34, 34, 0.699);
+  text-decoration: none;
 }
 
 #submit {
-    background-color: rgba(93,93,93,0.25);
-    border-radius: 5%;
-    width: 10rem;
-    height: 2.5rem;
-    border: 1px solid dimgrey;
-    cursor: pointer;
-    border-color: black;
+  background-color: rgba(93, 93, 93, 0.25);
+  border-radius: 5%;
+  width: 10rem;
+  height: 2.5rem;
+  border: 1px solid dimgrey;
+  cursor: pointer;
+  border-color: black;
 }
 
 .flex-container {
-    display: flex;
-    height: 100vh;
-    margin: 0;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  display: flex;
+  height: 100vh;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    width: 80vw;
-    max-width: 400px;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 80vw;
+  max-width: 400px;
+  align-items: center;
 }
 
-
 .styled-button {
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    border: 1px solid #ccc;
-    font-size: 2rem;
-    border-color: black;
-    width: 16rem;
-    height: 4rem;
-    text-align: center;
-    align-items: center;
-    background-color: rgba(93,93,93,0.25);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  font-size: 2rem;
+  border-color: black;
+  width: 16rem;
+  height: 4rem;
+  text-align: center;
+  align-items: center;
+  background-color: rgba(93, 93, 93, 0.25);
 }
 
 #submit:hover {
-    background-color: rgba(40,120,40, 0.75);
+  background-color: rgba(40, 120, 40, 0.75);
 }
 
 .styled-button:hover {
-    border-color:darkslategrey;
-    outline: none;
-    background-color: rgba(93,93,93,0.75);
+  border-color: darkslategrey;
+  outline: none;
+  background-color: rgba(93, 93, 93, 0.75);
 }
 
 .note:hover {
-    color: rgba(116, 116, 116, 0.699);
+  color: rgba(116, 116, 116, 0.699);
 }
 
 .bran {
-    margin-top: 1rem;
-    color: rgba(0, 0, 0, 0.801);
-    text-align: center;
-    font-size: 1.8rem;
+  margin-top: 1rem;
+  color: rgba(0, 0, 0, 0.801);
+  text-align: center;
+  font-size: 1.8rem;
 }
 
-.profileBox, .t2 {
-    margin: 2vh auto;
-    border-radius: 1rem;
-    background-color: rgba(156, 156, 156, 0.267);
-    padding: 1.5rem;
-    width: 80vw;
-    max-width: 400px;
-    font-size: 1rem;
-    text-align: center;
-    overflow: hidden;
+.profileBox,
+.t2 {
+  margin: 2vh auto;
+  border-radius: 1rem;
+  background-color: rgba(156, 156, 156, 0.267);
+  padding: 1.5rem;
+  width: 80vw;
+  max-width: 400px;
+  font-size: 1rem;
+  text-align: center;
+  overflow: hidden;
 }
 
 .t2 img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 0.5rem;
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
 }
 
 .t2 {
-    max-width: 700px;
+  max-width: 700px;
 }
 
 #profileBox {
-    color: rgb(58, 58, 58);
+  color: rgb(58, 58, 58);
 }
 
 #pfp {
-    width: 30vw;
-    max-width: 150px;
-    border-radius: 50%;
-    margin: 0 auto;
-    display: block;
+  width: 30vw;
+  max-width: 150px;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
 }
 
 .singleCol {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    text-align: center;
-    grid-auto-flow: column;
-    grid-column-gap: 1.5rem;
-    margin-top: 2vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  grid-auto-flow: column;
+  grid-column-gap: 1.5rem;
+  margin-top: 2vh;
 }
 
 .social-media-icons-white a {
-    color: white;
-    font-size: 2rem;
+  color: white;
+  font-size: 2rem;
 }
 
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #autoplay-fix {
-    background-color: #6e6f7a;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 4rem;
+  background-color: #6e6f7a;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
 }
 
 .fa-music {
-    color: white;
+  color: white;
 }
 
 #current-song {
-    color: white;
-    font-family: "Comic Neue", cursive;
+  color: white;
+  font-family: "Comic Neue", cursive;
 }
 
 .song {
-    padding-top: 5vh;
-    font-size: 1.5rem;
-    color: white;
+  padding-top: 5vh;
+  font-size: 1.5rem;
+  color: white;
 }
 
-.b1, .b2, .b3, .b4 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    margin-top: 1.5rem;
-    border-radius: 1rem;
-    background-color: rgba(156, 156, 156, 0.267);
-    padding: 1rem;
-    width: 18vw;
-    max-width: 200px;
-    font-size: 1rem;
-    color: white;
-    text-align: center;
-    height: 3rem;
+.b1,
+.b2,
+.b3,
+.b4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  margin-top: 1.5rem;
+  border-radius: 1rem;
+  background-color: rgba(156, 156, 156, 0.267);
+  padding: 1rem;
+  width: 18vw;
+  max-width: 200px;
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+  height: 3rem;
 }
 
 .b1:hover {
-    background-color: rgba(50, 50, 228, 0.733);
-    font-weight: bold;
+  background-color: rgba(50, 50, 228, 0.733);
+  font-weight: bold;
 }
 
 .b2:hover {
-    background-color: rgba(243, 174, 226, 0.733);
-    font-weight: bold;
+  background-color: rgba(243, 174, 226, 0.733);
+  font-weight: bold;
 }
 
 .b3:hover {
-    background-color: rgba(45, 186, 78, 0.733);
-    font-weight: bold;
+  background-color: rgba(45, 186, 78, 0.733);
+  font-weight: bold;
 }
 
 .b4:hover {
-    background-color: rgba(0, 74, 229, 0.733);
-    font-weight: bold;
+  background-color: rgba(0, 74, 229, 0.733);
+  font-weight: bold;
 }
 
 .languagetitle {
-    color: white;
-    font-size: 2rem;
+  color: white;
+  font-size: 2rem;
 }
 
 .languages {
-    grid-column-gap: 4vw;
+  grid-column-gap: 4vw;
 }
 
 .html {
-    color: #FF5733;
+  color: #ff5733;
 }
 
 .css {
-    color: #5585b5;
+  color: #5585b5;
 }
 
 .dpy {
-    color: #5865F2;
+  color: #5865f2;
 }
 
 .py {
-    color: #FFD43B;
+  color: #ffd43b;
 }
 
 .js {
-    color: #f7df1e;
+  color: #f7df1e;
 }
 
-.html, .css, .dpy, .js, .py {
-    font-size: 4rem;
+.html,
+.css,
+.dpy,
+.js,
+.py {
+  font-size: 4rem;
 }
 
-.dpyhref, .csshref, .htmlhref, .jshref, .pyhref {
-    text-decoration: none;
-    color: white;
-    font-size: 1rem;
+.rem1 {
+  font-size: 1rem;
+}
+.rem2 {
+  font-size: 2rem;
+}
+.rem3 {
+  font-size: 3rem;
+}
+
+.dpyhref,
+.csshref,
+.htmlhref,
+.jshref,
+.pyhref {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
 }
 
 #discord:hover {
-    color: #5865F2;
-    transform: scale(1.1);
+  color: #5865f2;
+  transform: scale(1.1);
 }
 
 #spotify:hover {
-    color: #1DB954;
-    transform: scale(1.1);
+  color: #1db954;
+  transform: scale(1.1);
 }
 
 #lastfm:hover {
-    color: #C3000D;
-    transform: scale(1.1);
+  color: #c3000d;
+  transform: scale(1.1);
 }

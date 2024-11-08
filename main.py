@@ -23,7 +23,7 @@ async def root():
 
 @app.get("/py")
 async def py():
-    return FileResponse("templates/py.html")
+    return FileResponse("templates/projects/py.html")
 
 
 @app.get("/keiran")
@@ -38,13 +38,20 @@ async def bran():
 
 @app.get("/web")
 async def web():
-    return FileResponse("templates/web.html")
+    return FileResponse("templates/projects/web.html")
 
 
 @app.get("/upload")
 async def upload():
     return FileResponse("templates/upload.html")
 
+@app.get("/bot/privacy")
+async def upload():
+    return FileResponse("templates/bot/privacy.html")
+
+@app.get("/bot/tos")
+async def upload():
+    return FileResponse("templates/bot/tos.html")
 
 @app.get("/bio")
 async def bio():
