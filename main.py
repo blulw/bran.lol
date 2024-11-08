@@ -45,13 +45,6 @@ async def web():
 async def upload():
     return FileResponse("templates/upload.html")
 
-@app.get("/bot/privacy")
-async def upload():
-    return FileResponse("templates/bot/privacy.html")
-
-@app.get("/bot/tos")
-async def upload():
-    return FileResponse("templates/bot/tos.html")
 
 @app.get("/bio")
 async def bio():
