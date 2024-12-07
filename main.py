@@ -47,7 +47,7 @@ async def upload():
 
 @app.get("/bio")
 async def bio():
-    return RedirectResponse("https://e-z.bio/bran")
+    return FileResponse("templates/bio.html")
 
 
 @app.post("/success", response_class=HTMLResponse)
