@@ -27,22 +27,36 @@
     <meta content="https://bran.lol/" property="og:url" />
     <meta content="https://media.bran.lol/glaive.png" property="og:image" />
     <meta content="#B4B4B4" data-react-helmet="true" name="theme-color" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <img src="https://media.bran.lol/bg.gif" id="backvid" />
+  <body class="items-center bg-none">
+    <img
+      src="https://media.bran.lol/bg.gif"
+      class="w-screen h-screen object-cover fixed top-0 left-0 z-[-1] bg-fixed"
+    />
 
-    <div class="header">
-      <h1 class="bran">bran</h1>
+    <div class="mt-6 text-center">
+      <h1
+        class="mt-4 text-[rgba(0,0,0,0.801)] text-center text-[1.8rem] font-bold"
+      >
+        bran
+      </h1>
     </div>
 
-    <div class="profileBox">
-      <img src="https://media.bran.lol/pfp.png" id="pfp" />
-      <div class="container">
-        <div class="singleCol social-media-icons-white">
+    <div
+      class="m-[2vh] mx-auto rounded-2xl bg-[rgba(156,156,156,0.267)] p-6 w-[80vw] max-w-[400px] text-base text-center overflow-hidden"
+    >
+      <img
+        src="https://media.bran.lol/pfp.png"
+        class="w-[30vw] max-w-[150px] rounded-full m-0 mx-auto block"
+      />
+      <div class="container flex items-center justify-center">
+        <div class="singleCol">
           <a
             target="_blank"
             href="https://discord.com/users/817475032112037888"
             id="discord"
+            class="text-white text-[2rem] hover:text-[#5865f2]"
           >
             <i class="fa-brands fa-discord"></i>
           </a>
@@ -50,60 +64,93 @@
             target="_blank"
             href="https://open.spotify.com/user/31afbvnmlmmvxqwc547s2qtcb62u?si=bdc903360a7c414d"
             id="spotify"
+            class="text-white text-[2rem] hover:text-[#1db954]"
           >
             <i class="fa-brands fa-spotify"></i>
           </a>
-          <a target="_blank" href="https://last.fm/user/blulw" id="lastfm">
+          <a
+            target="_blank"
+            href="https://last.fm/user/blulw"
+            id="lastfm"
+            class="text-white text-[2rem] hover:text-[#c3000d]"
+          >
             <i class="fa-brands fa-lastfm"></i>
           </a>
         </div>
       </div>
-      <p id="profileBox">
+      <p class="text-[rgb(58,58,58)]">
         16 year old chronically online compsci student <br />
         i love glaive
       </p>
     </div>
 
-    <div class="singleCol buttons">
-      <a target="_blank" href="mailto:bran@bran.lol" class="b1">
+    <div class="singleCol">
+      <a
+        target="_blank"
+        href="mailto:bran@bran.lol"
+        class="flex justify-center items-center no-underline mt-6 rounded-2xl bg-[rgba(156,156,156,0.267)] p-4 w-[18vw] max-w-[200px] text-base text-white text-center h-12 hover:bg-[rgba(50,50,228,0.733)] hover:font-bold"
+      >
         <p>Email</p>
       </a>
-      <a target="_blank" href="https://anilist.co/user/blulw/" class="b2">
-        <p>AniList</p>
-      </a>
-      <a target="_blank" href="https://github.com/blulw/" class="b3">
+      <a
+        target="_blank"
+        href="https://github.com/blulw/"
+        class="flex justify-center items-center no-underline mt-6 rounded-2xl bg-[rgba(156,156,156,0.267)] p-4 w-[18vw] max-w-[200px] text-base text-white text-center h-12 hover:bg-[rgba(45,186,78,0.733)] hover:font-bold"
+      >
         <p>GitHub</p>
       </a>
-      <a target="_blank" href="./bio" class="b4">
-        <p>E-Z Bio</p>
+      <a
+        target="_blank"
+        href="https://bran.social"
+        class="flex justify-center items-center no-underline mt-6 rounded-2xl bg-[rgba(156,156,156,0.267)] p-4 w-[18vw] max-w-[200px] text-base text-white text-center h-12 hover:bg-[rgba(245,231,39,0.733)] hover:font-bold"
+      >
+        <p>Socials</p>
       </a>
     </div>
-    <p class="singleCol languagetitle">tools i've used</p>
-    <div class="singleCol languages">
-      <a target="_blank" href="./web" class="htmlhref">
-        <i class="fa-brands fa-html5 html"></i>
+    <p class="singleCol text-white text-[2rem]">tools i've used</p>
+    <div class="singleCol gap[4vw]">
+      <a target="_blank" href="./web" class="text-base text-white no-underline">
+        <i class="fa-brands fa-html5 text-[#ff5733] text-[4rem]"></i>
         <p>html</p>
       </a>
-      <a target="_blank" href="./web" class="csshref">
-        <i class="fa-brands fa-css3-alt css"></i>
+      <a target="_blank" href="./web" class="text-base text-white no-underline">
+        <i class="fa-brands fa-css3-alt text-[#5585b5] text-[4rem]"></i>
         <p>css</p>
       </a>
-      <a target="_blank" href="./web" class="jshref">
-        <i class="fa-brands fa-js js"></i>
+      <a target="_blank" href="./web" class="text-base text-white no-underline">
+        <i class="fa-brands fa-js text-[#f7df1e] text-[4rem]"></i>
         <p>javascript</p>
       </a>
-      <a target="_blank" href="./py" class="dpyhref">
-        <i class="fa-brands fa-discord dpy"></i>
+      <a target="_blank" href="./py" class="text-base text-white no-underline">
+        <i class="fa-brands fa-discord text-[#5865f2] text-[4rem]"></i>
         <p>discord.py</p>
       </a>
-      <a target="_blank" href="./py" class="pyhref">
-        <i class="fa-brands fa-python py"></i>
+      <a target="_blank" href="./py" class="text-base text-white no-underline">
+        <i class="fa-brands fa-python text-[#ffd43b] text-[4rem]"></i>
         <p>python</p>
+      </a>
+      <a target="_blank" href="./web" class="text-base text-white no-underline">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 128 128"
+          class="w-[4rem] h-[4rem]"
+        >
+          <path
+            d="M64.004 25.602c-17.067 0-27.73 8.53-32 25.597 6.398-8.531 13.867-11.73 22.398-9.597 4.871 1.214 8.352 4.746 12.207 8.66C72.883 56.629 80.145 64 96.004 64c17.066 0 27.73-8.531 32-25.602-6.399 8.536-13.867 11.735-22.399 9.602-4.87-1.215-8.347-4.746-12.207-8.66-6.27-6.367-13.53-13.738-29.394-13.738zM32.004 64c-17.066 0-27.73 8.531-32 25.602C6.402 81.066 13.87 77.867 22.402 80c4.871 1.215 8.352 4.746 12.207 8.66 6.274 6.367 13.536 13.738 29.395 13.738 17.066 0 27.73-8.53 32-25.597-6.399 8.531-13.867 11.73-22.399 9.597-4.87-1.214-8.347-4.746-12.207-8.66C55.128 71.371 47.868 64 32.004 64zm0 0"
+            fill="#38bdf8"
+          />
+        </svg>
+        <p>tailwind</p>
       </a>
     </div>
     <audio id="audio" loop src=""></audio>
-    <div id="autoplay-fix">click</div>
-    <div class="singleCol song">
+    <div
+      id="autoplay-fix"
+      class="bg-[#6e6f7a] fixed top-0 left-0 w-screen h-screen text-white flex items-center justify-center text-[4rem]"
+    >
+      click
+    </div>
+    <div class="singleCol pt-[5vh] text-2xl text-white">
       <div id="song-buttons">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -124,7 +171,7 @@
           <path d="M9 8h10" />
         </svg>
       </div>
-      <p id="current-song"></p>
+      <p id="current-song" class="text-white"></p>
     </div>
   </body>
 </html>
