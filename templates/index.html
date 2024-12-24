@@ -146,10 +146,11 @@
     <audio id="audio" loop src=""></audio>
     <div
       id="autoplay-fix"
-      class="bg-[#6e6f7a] fixed top-0 left-0 w-screen h-screen text-white flex items-center justify-center text-[4rem]"
+      class="bg-[#6e6f7a] fixed top-0 left-0 w-screen h-screen text-white flex items-center justify-center text-[4rem] z-50"
     >
       click
     </div>
+
     <div class="singleCol pt-[5vh] text-2xl text-white">
       <div id="song-buttons">
         <svg
@@ -172,6 +173,13 @@
         </svg>
       </div>
       <p id="current-song" class="text-white"></p>
+    </div>
+    <div class="flex items-center justify-center">
+      <input
+        type="range"
+        id="volume-slider"
+        class="m-4 rounded-lg custom-slider w-52"
+      />
     </div>
   </body>
 </html>
