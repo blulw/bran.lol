@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const volume = document.getElementById("volume-slider");
   let audio = null;
   let mute = false;
-  let volBeforeMute = 1;
 
   button.onclick = () => {
     const number = Math.floor(Math.random() * 9);
@@ -70,7 +69,6 @@ document.addEventListener("DOMContentLoaded", () => {
             <path d="M3 3l18 18" />
           </svg>
         `;
-        volBeforeMute = audio.volume;
         audio.volume = 0;
       } else {
         songbutton.innerHTML = `
@@ -82,14 +80,17 @@ document.addEventListener("DOMContentLoaded", () => {
             <path d="M9 8h10" />
           </svg>
         `;
-        audio.volume = volBeforeMute;
+        audio.volume = realVolume;
       }
     }
   };
 
   volume.addEventListener("input", function (e) {
     if (audio) {
-      audio.volume = e.currentTarget.value / 100;
+      realVolume = e.currentTarget.value / 100;
+      if (!mute) {
+        audio.volume = realVolume;
+      }
     }
   });
 });
