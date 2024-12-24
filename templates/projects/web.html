@@ -1,54 +1,99 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/static/styles.css">
-        <script src="https://kit.fontawesome.com/4d5a638491.js" crossorigin="anonymous"></script>
-        <title>html</title>
-        <link rel="icon" href="favicon.ico">
-        <meta content="Webdev Projects" property="og:title" />
-        <meta content="My projects in HTML, CSS, JS etc" property="og:description" />
-        <meta content="https://bran.lol/" property="og:url" />
-        <meta content="https://media.bran.lol/glaive.png" property="og:image" />
-        <meta content="#B4B4B4" data-react-helmet="true" name="theme-color" />
-    <body>
-        <img src="https://media.bran.lol/bg.gif" id="backvid">
-        <div class="headerh">
-            <h1>Projects</h1>
-        </div>    
-        <div>
-            <div class="t2">
-                    <h1>bran.lol</h1>
-                    <div class="languages">
-                          <i class="fa-brands fa-html5 html rem2"></i>
-                          <i class="fa-brands fa-css3-alt css rem2"></i>
-                          <i class="fa-brands fa-js js rem2"></i>
-                          <i class="fa-brands fa-python py rem2"></i>
-                      </div>
-                    <p>This site was made using CSS, HTML, and JS. Routing is handled using the FastAPI Python Library.</p>
-            </div>
-            <div class="t2">
-                <h1>media.bran.lol</h1>
-                <div class="languages">
-                      <i class="fa-brands fa-html5 html rem2"></i>
-                      <i class="fa-brands fa-css3-alt css rem2"></i>
-                      <i class="fa-brands fa-python py rem2"></i>
-                  </div>
-                <p>This is a collection of static images or other media hosted to be used on my site or other projects. Routing is handled using the FastAPI Python Library.</p>
-            </div>
-            <div class="t2">
-                <h1>api.bran.lol</h1>
-                <div class="languages">
-                      <i class="fa-brands fa-python py rem2"></i>
-                  </div>
-                <p>This is an API used for uploading files, holding files uploaded through my site, and providing them back to pages on my site.<br>This API also has an endpoint to retrieve a random glaive image, which i use for my bot.</p>
-            </div>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/static/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/4d5a638491.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>html</title>
+    <link rel="icon" href="favicon.ico" />
+    <meta content="Webdev Projects" property="og:title" />
+    <meta
+      content="My projects in HTML, CSS, JS etc"
+      property="og:description"
+    />
+    <meta content="https://bran.lol/" property="og:url" />
+    <meta content="https://media.bran.lol/glaive.png" property="og:image" />
+    <meta content="#B4B4B4" data-react-helmet="true" name="theme-color" />
+    <script src="/static/tailwind.js"></script>
+  </head>
+  <body>
+    <img src="https://media.bran.lol/bg.gif" id="backvid" />
+    <div class="headerh">
+      <h1>Projects</h1>
+    </div>
+    <div>
+      <div class="t2">
+        <h1>bran.lol</h1>
+        <div class="flex items-center justify-center space-x-1">
+          <i class="fa-brands fa-html5 html rem2"></i>
+          <i class="fa-brands fa-css3-alt css rem2"></i>
+          <i class="fa-brands fa-js js rem2"></i>
+          <i class="fa-brands fa-python py rem2"></i>
         </div>
-    </body>
+        <p>
+          This site was made using CSS, HTML, and JS. Routing is handled using
+          the FastAPI Python Library.
+        </p>
+      </div>
+      <div class="t2">
+        <h1>media.bran.lol</h1>
+        <div class="flex items-center justify-center space-x-1">
+          <i class="fa-brands fa-html5 html rem2"></i>
+          <i class="fa-brands fa-css3-alt css rem2"></i>
+          <i class="fa-brands fa-python py rem2"></i>
+        </div>
+        <p>
+          This is a collection of static images or other media hosted to be used
+          on my site or other projects. Routing is handled using the FastAPI
+          Python Library.
+        </p>
+      </div>
+      <div class="t2">
+        <h1>api.bran.lol</h1>
+        <div class="flex items-center justify-center space-x-1">
+          <i class="fa-brands fa-python py rem2"></i>
+        </div>
+        <p>
+          This is an API used for uploading files, holding files uploaded
+          through my site, and providing them back to pages on my site.<br />This
+          API also has an endpoint to retrieve a random glaive image, which i
+          use for my bot.
+        </p>
+      </div>
+      <div class="t2">
+        <h1>bran.social</h1>
+        <div class="flex items-center justify-center space-x-1">
+          <i class="fa-brands fa-html5 html rem2"></i>
+          <i class="fa-brands fa-css3-alt css rem2"></i>
+          <i class="fa-brands fa-python py rem2"></i>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 128 128"
+            class="w-[2rem] h-[2rem]"
+          >
+            <path
+              d="M64.004 25.602c-17.067 0-27.73 8.53-32 25.597 6.398-8.531 13.867-11.73 22.398-9.597 4.871 1.214 8.352 4.746 12.207 8.66C72.883 56.629 80.145 64 96.004 64c17.066 0 27.73-8.531 32-25.602-6.399 8.536-13.867 11.735-22.399 9.602-4.87-1.215-8.347-4.746-12.207-8.66-6.27-6.367-13.53-13.738-29.394-13.738zM32.004 64c-17.066 0-27.73 8.531-32 25.602C6.402 81.066 13.87 77.867 22.402 80c4.871 1.215 8.352 4.746 12.207 8.66 6.274 6.367 13.536 13.738 29.395 13.738 17.066 0 27.73-8.53 32-25.597-6.399 8.531-13.867 11.73-22.399 9.597-4.87-1.214-8.347-4.746-12.207-8.66C55.128 71.371 47.868 64 32.004 64zm0 0"
+              fill="#38bdf8"
+            />
+          </svg>
+        </div>
+        <p>
+          Basic webpage with buttons for all my socials. Routing is handled
+          using the FastAPI Python Library.
+        </p>
+      </div>
+    </div>
+  </body>
 </html>
