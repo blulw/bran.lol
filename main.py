@@ -25,6 +25,29 @@ async def root():
 async def py():
     return FileResponse("templates/projects/py.html")
 
+@app.get("/gay", response_class=HTMLResponse)
+async def py():
+    html_content = f"""
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+            <link rel="icon" href="https://media.bran.lol/favicon.ico">
+            <link rel="stylesheet" href="/static/styles.css">
+            <meta content="trans rights" property="og:title" />
+            <meta content="https://bran.lol/" property="og:url" />
+            <meta content="https://media.bran.lol/gay.gif" property="og:image" />
+            <meta content="#B4B4B4" data-react-helmet="true" name="theme-color" />
+        </head>
+        <body>
+            <img src="https://media.bran.lol/gay.gif" id="backvid" alt="Background Video">
+        </body>
+    </html>
+    """
+    return HTMLResponse(content=html_content)
+
 
 @app.get("/keiran")
 async def keiran():
